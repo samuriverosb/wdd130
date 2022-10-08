@@ -1,0 +1,20 @@
+* {
+  text-align: center;
+}
+
+body {
+	background-color: #a29bfe;
+}
+
+h1:hover {
+	color: #fff;
+}
+
+img {
+  width: 40%;
+}
+
+ol {
+	display: block;
+	margin: 0 auto;
+}
