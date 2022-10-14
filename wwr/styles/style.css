@@ -1,6 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oxygen:wght@700&display=swap');
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 22px;
+	background-color: #758BFD;
+	color: black;
+	margin: 0;
+	padding: 0;
+}
+
 #content {
 	max-width: 1600px;
 	margin: 0 auto;
+}
+
+.home-title {
+	font-family: 'Oxygen', sans-serif;
+	font-weight: 800;
+	font-size: 2em;
+	margin-top: 10px;
+}
+
+h2 {
+	font-family: 'Oxygen', sans-serif;
+	font-weight: 500;
+	margin: 0;
 }
 
 a {
@@ -11,6 +35,7 @@ a {
 nav a {
 	text-align: center;
 	color: #27187E;
+	padding: 35px;
 }
 
 #hero-msg h1, #hero-msg h4 {
@@ -25,14 +50,13 @@ main section {
 	text-align: center;
 }
 
+main section img {
+	box-sizing: border-box;
+}
+
 #background {
 	height: 725px;
 	background-color: #fff;
-}
-
-body {
-	background-color: #758BFD;
-	color: black;
 }
 
 header {
@@ -45,19 +69,40 @@ nav a:hover {
 
 .book, .join {
 	background-color: #FF8600;
+	font-size: 18px;
+	padding: 15px 30px;
+	margin-top: 50px;
+	border-radius: 5px;
 }
 
 .book:hover, .join:hover {
 	background-color: #27187E;
 }
 
+.rivers-card, .camping-card, .rapids-card {
+	margin: 200px 0;
+}
+
+.card-img {
+	border: 10px solid #27187E;
+}
+
 .msg {
 	background-color: #F1F2F6;
+	line-height: 1.5em;
+	padding: 35px;
+}
+
+.msg p {
+	font-size: .8em;
+	padding-bottom: 15px;
 }
 
 footer {
 	background-color: #27187E;
 	color: #F1F2F6;
+	padding: 25px 50px;
+	margin-top: 200px;
 }
 
 footer a {
@@ -74,8 +119,16 @@ footer p {
 	font-size: 1.2em;
 }
 
+footer .social img {
+	padding-top: 15px;
+}
+
 .logo {
 	width: 140px;
+}
+
+.logo-link {
+	padding-top: 5px;
 }
 
 #hero-img {
@@ -84,4 +137,5 @@ footer p {
 
 .icon {
 	width: 80px;
+	padding-top: 10px;
 }
