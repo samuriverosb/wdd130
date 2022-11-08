@@ -79,6 +79,8 @@ nav a:hover {
 
 .container-img {
   width: 600px;
+  border: 8px solid #FF8600;
+  box-shadow: 5px 5px 20px #1b1155;
 }
 
 .container1 {
@@ -118,9 +120,9 @@ nav a:hover {
 .container4 {
   background-color: #758BFD;
   margin-bottom: -25px;
-  height: 800px;
+  height: 900px;
   text-align: center;
-  padding-top: 30px;
+  padding-top: 70px;
   font-weight: bold;
 }
 
@@ -155,6 +157,7 @@ nav a:hover {
 	grid-column: 6/10;
 	grid-row: 6/7;
 	box-shadow: 5px 5px 10px #1b1155;
+  text-align: center;
 }
 
 .msg p {
@@ -190,10 +193,6 @@ a {
 	padding: 15px 30px;
 	margin-top: 50px;
 	border-radius: 5px;
-}
-
-.join {
-  margin-left: 200px;
 }
 
 .book:hover, .join:hover {
