@@ -15,13 +15,21 @@
 body {
   margin: 0;
   padding: 0;
+  background: radial-gradient(circle, transparent 20%, #264653 20%, #264653 80%, transparent 80%, transparent) 0% 0% / 80px 80px, radial-gradient(circle, transparent 20%, #264653 20%, #264653 80%, transparent 80%, transparent) 40px 40px / 80px 80px, linear-gradient(#2a9d8f 0.5px, transparent 0.5px) 0px -0.25px / 40px 40px, linear-gradient(90deg, #2a9d8f 0.5px, #264653 0.5px) -0.25px 0px / 40px 40px #264653;
+  background-color: #264653; 
+}
+
+a {
+  text-decoration: none;
 }
 
 header {
   height: 5.5em;
   background-color: #2A9D8F;
   position: fixed;
+  top: 0;
   width: 100%;
+  z-index: 2;
 }
 
 #logo {
@@ -70,7 +78,7 @@ nav ul a:hover {
 
 footer {
   height: 18em;
-  background-color: #264653;
+  background-color: #1d3640;
   display: flex;
   justify-content: space-between;
   font-family: "Sansation";
@@ -134,4 +142,268 @@ svg {
 
 .social a:hover p {
   color: #E9C46A;
+}
+
+#hero {
+  width: 100%;
+  text-align: center;
+  max-height: 100vh;
+}
+
+#hero img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 100vh;
+  position: relative;
+  z-index: -1;
+}
+
+.hero-text {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 15em;
+  text-align: center;
+  color: #ecf0f1;
+  background-image: linear-gradient(180deg, rgba(255, 0, 0, 0), black);
+}
+
+.hero-text h1 {
+  font-size: 7em;
+  font-family: "Lucidity";
+}
+
+.hero-text p {
+  font-family: "Sansation";
+  font-size: 1.5em;
+}
+
+.content {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-img {
+  width: 800px;
+  height: 500px;
+  z-index: -1;
+  box-shadow: 0 0 20px black;
+}
+
+.content-box {
+  background-color: #E76F51;
+  width: 600px;
+  height: 300px;
+  padding: 20px;
+  box-shadow: 0 0 20px black;
+  z-index: 1;
+  color: #ecf0f1;
+}
+
+.img-left .game-img {
+  margin-left: 10em;
+}
+
+.img-left .content-box {
+  margin-left: -20em;
+  text-align: right;
+}
+
+.img-right .game-img {
+  margin-right: 10em;
+}
+.img-right .content-box {
+  margin-right: -20em;
+}
+
+.content-box h2 {
+  font-family: "Lucidity";
+  font-size: 2.3em;
+}
+
+.content-box p {
+  font-family: "Sansation";
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-top: 1em;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.learn-more {
+  color: #264653;
+  background-color: #e9c46a;
+  padding: 10px 30px;
+  border: none;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  border-radius: 1px;
+  transition : 435ms;
+  transform: translateY(0);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.learn-more:hover {
+  transition : 435ms;
+  padding: 10px 30px;
+  transform : translateY(-4px);
+  background-color: #2a9d8f;
+  color: #ecf0f1;
+  border: none;
+}
+
+@media only screen and (max-width: 1244px) {
+  .img-left {
+    margin-left: -10em;
+  }
+
+  .img-right .game-img {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 1136px) {
+  .img-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5em 0;
+  }
+
+  .img-right {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: 5em 0;
+  }
+
+  .content-box {
+    margin-top: -8em;
+    height: fit-content;
+  }
+
+  .img-left .game-img {
+    margin: 0;
+  }
+
+  .img-right .game-img {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  #logo {
+    margin-left: -3em;
+  }
+
+  #hero img {
+    height: 100vh;
+  }
+
+  .content {
+    margin-top: 0;
+  }
+
+  .img-left .content-box {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .img-right .content-box {
+    margin-right: 0;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 814px) {
+  .content .game-img {
+    width: 100%;
+    height: max-content;
+  }
+
+  .content .content-box {
+    width: 80%;
+    margin-top: -.5em;
+  }
+
+  #logo {
+    display: none;
+    width: 0;
+  }
+
+  .hero-text h1 {
+    font-size: 3.8em;
+  }
+
+  .hero-text p {
+    font-size: 1em;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    margin-left: -3em;
+    justify-content: space-between;
+    font-size: .7em;
+  }
+
+  .content-box h2 {
+    font-size: 1.5em;
+  }
+
+  .content-box p {
+    font-size: 1em;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #footer-logo {
+    width: 80px;
+    margin: 0;
+    margin-bottom: -1em;
+  }
+
+  #uni-logo {
+    width: 50px;
+  }
+
+  .footer-text {
+    font-size: .7em;
+  }
+
+  .social {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0;
+    margin-top: 1em;
+  }
+
+  .social p {
+    display: none;
+  }
+
+  svg {
+    width: 50px;
+  }
 }
