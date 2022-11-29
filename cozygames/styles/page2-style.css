@@ -15,6 +15,8 @@
 body {
   margin: 0;
   padding: 0;
+  background: radial-gradient(circle, transparent 20%, #264653 20%, #264653 80%, transparent 80%, transparent) 0% 0% / 80px 80px, radial-gradient(circle, transparent 20%, #264653 20%, #264653 80%, transparent 80%, transparent) 40px 40px / 80px 80px, linear-gradient(#2a9d8f 0.5px, transparent 0.5px) 0px -0.25px / 40px 40px, linear-gradient(90deg, #2a9d8f 0.5px, #264653 0.5px) -0.25px 0px / 40px 40px #264653;
+  background-color: #264653; 
 }
 
 header {
@@ -71,7 +73,7 @@ nav ul a:hover {
 
 footer {
   height: 18em;
-  background-color: #264653;
+  background-color: #1d3640;
   display: flex;
   justify-content: space-between;
   font-family: "Sansation";
@@ -137,37 +139,287 @@ svg {
   color: #E9C46A;
 }
 
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
+#hero {
+  width: 100%;
   text-align: center;
+  max-height: 100vh;
+}
+
+#hero img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 100vh;
+  position: relative;
+  z-index: -1;
+}
+
+.hero-text {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 15em;
+  text-align: center;
+  color: #ecf0f1;
+  background-image: linear-gradient(180deg, rgba(255, 0, 0, 0), black);
+}
+
+.hero-text h1 {
+  font-size: 7em;
+  font-family: "Lucidity";
+}
+
+.hero-text p {
+  font-family: "Sansation";
+  font-size: 1.5em;
+}
+
+.content {
+  width: 100%;
+  text-align: center;
+  max-height: 100vh;
+}
+
+.content img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 100vh;
+  position: relative;
+  z-index: -1;
+}
+
+.content .text {
+  z-index: 1;
+  position: absolute;
+  bottom: -100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 12em;
+  text-align: center;
+  color: #ecf0f1;
+  background-image: linear-gradient(180deg, rgba(255, 0, 0, 0), black);
+}
+
+.text p {
+  width: 80%;
+  font-family: "Sansation";
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+
+.presentation {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.presentation-text {
+  font-family: "Sansation";
+  width: 50%;
+  padding: 2em;
+  background-color: #E76F51;
+  color: #ecf0f1;
+  font-weight: 600;
+  font-size: 1.2em;
+  box-shadow: 0 0 20px black;
+}
+
+.card {
+  box-shadow: 0 0 15px black;
+  max-width: 300px;
+  text-align: center;
+  background-color: #ecf0f1;
+}
+
+.card h1 {
+  font-family: "Lucidity";
 }
 
 .title {
   color: grey;
   font-size: 18px;
+  font-family: "Sansation";
+  font-weight: 600;
 }
 
-button {
+.card p {
+  font-family: "Sansation";
+}
+
+.card button {
   border: none;
   outline: 0;
   display: inline-block;
   padding: 8px;
   color: white;
-  background-color: #000;
+  background-color: #E76F51;
   text-align: center;
   cursor: pointer;
   width: 100%;
   font-size: 18px;
+  font-weight: 600;
+  font-family: "Sansation";
 }
 
-a {
+.card a {
   text-decoration: none;
   font-size: 22px;
   color: black;
 }
 
-button:hover, a:hover {
+.card button:hover, .card a:hover {
   opacity: 0.7;
+}
+
+@media only screen and (max-width: 1244px) {
+  .content {
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .content img {
+    position: unset;
+    width: 70%;
+    box-shadow: 0 0 15px black;
+  }
+
+  .content .text {
+    position: unset;
+    background-image: none;
+    font-size: .8em;
+    margin-top: 2em;
+    width: 80%;
+    padding: 1em;
+    height: fit-content;
+    background-color: #E76F51;
+    box-shadow: 0 0 20px black;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  #logo {
+    display: none;
+    width: 0;
+  }
+
+  #hero img {
+    height: 100vh;
+  }
+
+  .hero-text h1 {
+    font-size: 3.8em;
+  }
+
+  .hero-text p {
+    font-size: 1em;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    margin-left: -3em;
+    justify-content: space-between;
+    font-size: .7em;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    height: 20em;
+  }
+
+  #footer-logo {
+    width: 80px;
+    margin: 0;
+    margin-bottom: -1em;
+  }
+
+  #uni-logo {
+    width: 50px;
+  }
+
+  .footer-text {
+    font-size: .7em;
+  }
+
+  .social {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0;
+    margin-top: 1em;
+  }
+
+  .social p {
+    display: none;
+  }
+
+  svg {
+    width: 50px;
+  }
+
+  .content img {
+    width: 100%;
+    height: fit-content;
+    margin-top: 0;
+  }
+
+  .content .text {
+    width: 100%;
+    font-size: .6em;
+    padding: 0;
+  }
+
+  .presentation {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  .presentation-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .presentation-text p {
+    width: 90%;
+    font-size: .7em;
+  }
+
+  p {
+    padding: 1em 0;
+  }
+
+  .card {
+    width: 230px;
+    height: fit-content;
+    margin: 2em 0 2em 0;
+    padding: 0;
+  }
+
+  .card h1 {
+    font-size: 1.5em;
+  }
+
+  .card .title {
+    font-size: 1em;
+  }
+
+  .card p {
+    font-size: 1em;
+  }
 }
