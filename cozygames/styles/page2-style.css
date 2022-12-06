@@ -142,13 +142,13 @@ svg {
 #hero {
   width: 100%;
   text-align: center;
-  max-height: 100vh;
+  height: 100vh;
 }
 
 #hero img {
   width: 100%;
   object-fit: cover;
-  max-height: 100vh;
+  height: 100vh;
   position: relative;
   z-index: -1;
 }
@@ -177,13 +177,13 @@ svg {
 .content {
   width: 100%;
   text-align: center;
-  max-height: 100vh;
+  height: 100vh;
 }
 
 .content img {
   width: 100%;
   object-fit: cover;
-  max-height: 100vh;
+  height: 100vh;
   position: relative;
   z-index: -1;
 }
