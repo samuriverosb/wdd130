@@ -15,6 +15,8 @@
 body {
   margin: 0;
   padding: 0;
+  background: radial-gradient(circle, transparent 20%, #264653 20%, #264653 80%, transparent 80%, transparent) 0% 0% / 80px 80px, radial-gradient(circle, transparent 20%, #264653 20%, #264653 80%, transparent 80%, transparent) 40px 40px / 80px 80px, linear-gradient(#2a9d8f 0.5px, transparent 0.5px) 0px -0.25px / 40px 40px, linear-gradient(90deg, #2a9d8f 0.5px, #264653 0.5px) -0.25px 0px / 40px 40px #264653;
+  background-color: #264653; 
 }
 
 header {
@@ -22,6 +24,7 @@ header {
   background-color: #2A9D8F;
   position: fixed;
   width: 100%;
+  z-index: 2;
 }
 
 #logo {
@@ -70,7 +73,7 @@ nav ul a:hover {
 
 footer {
   height: 18em;
-  background-color: #264653;
+  background-color: #1d3640;
   display: flex;
   justify-content: space-between;
   font-family: "Sansation";
@@ -134,4 +137,207 @@ svg {
 
 .social a:hover p {
   color: #E9C46A;
+}
+
+#hero {
+  width: 100%;
+  text-align: center;
+  height: 100vh;
+}
+
+#hero img {
+  width: 100%;
+  object-fit: cover;
+  height: 100vh;
+  position: relative;
+  z-index: -1;
+}
+
+.hero-text {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 15em;
+  text-align: center;
+  color: #ecf0f1;
+  background-image: linear-gradient(180deg, rgba(255, 0, 0, 0), black);
+}
+
+.hero-text h1 {
+  font-size: 7em;
+  font-family: "Lucidity";
+}
+
+.hero-text p {
+  font-family: "Sansation";
+  font-size: 1.5em;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  margin-top: 3rem;
+}
+
+form {
+  width: 30rem;
+  height: 30rem;
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 0 0 10px black;
+  color: #ecf0f1;
+  font-family: "Sansation";
+  font-weight: 600;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+input {
+  height: 1.5rem;
+}
+
+select {
+  height: 1.5rem;
+}
+
+textarea {
+  resize: none;
+}
+
+.text {
+  font-family: "Lucidity";
+  color: #ecf0f1;
+  font-size: 3rem;
+  margin-top: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.btn-hover {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+  outline: none;
+}
+
+.btn-hover.btn {
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #4481eb,
+    #04befe,
+    #3f86ed
+  );
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+
+@media only screen and (max-width: 980px) {
+  #logo {
+    display: none;
+    width: 0;
+  }
+
+  #hero img {
+    height: 100vh;
+  }
+
+  .hero-text h1 {
+    font-size: 3.8em;
+  }
+
+  .hero-text p {
+    font-size: 1em;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    margin-left: -3em;
+    justify-content: space-between;
+    font-size: .7em;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    height: 20em;
+  }
+
+  #footer-logo {
+    width: 80px;
+    margin: 0;
+    margin-bottom: -1em;
+  }
+
+  #uni-logo {
+    width: 50px;
+  }
+
+  .footer-text {
+    font-size: .7em;
+  }
+
+  .social {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0;
+    margin-top: 1em;
+  }
+
+  .social p {
+    display: none;
+  }
+
+  svg {
+    width: 50px;
+  }
+
+  form {
+    width: 80%;
+  }
+
+  .text {
+    font-size: 2rem;
+  }
 }
